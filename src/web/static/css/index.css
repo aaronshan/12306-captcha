@@ -1,0 +1,20 @@
+body {
+	text-align: center
+}
+
+.div {
+	margin: 0 auto;
+	width: 800px;
+	height: 200px;
+	border: 2px solid #b32141
+}
+
+.result {
+	margin: 0 auto;
+	width: 250px;
+	height: 150px;
+}
+
+.bol {
+    font-weight: bold;
+}

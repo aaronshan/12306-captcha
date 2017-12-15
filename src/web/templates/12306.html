@@ -1,0 +1,55 @@
+<!doctype html>
+<title>12306验证码模型测试页面</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="/static/js/jquery-2.1.1.min.js" charset="UTF-8"></script>
+    <script src="/static/js/index.js" charset="UTF-8"></script>
+
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <h3>验证码图片</h3>
+    <div class = "div"><img src="{{ img_url }}"/></div>
+    <br/>
+    <h3>模型判断结果</h3>
+    <form action="/12306submit" method="post">
+        <div class = "div">
+            <input type="hidden" name="img_url" value="{{ img_url }}">
+            <input type="hidden" id="error_idx" name="error_idx" value="">
+            <table class = "result">
+                <tr class="bol">
+                    <td>{{ results[0] }}</td>
+                    <td>{{ results[1] }}</td>
+                    <td>{{ results[2] }}</td>
+                    <td>{{ results[3] }}</td>
+                </tr>
+                <tr>
+                    <td><input id="result0" name="result0" type="text"/></td>
+                    <td><input id="result1" name="result1" type="text"/></td>
+                    <td><input id="result2" name="result2" type="text"/></td>
+                    <td><input id="result3" name="result3" type="text"/></td>
+                </tr>
+                <tr class="bol">
+                    <td>{{ results[4] }}</td>
+                    <td>{{ results[5] }}</td>
+                    <td>{{ results[6] }}</td>
+                    <td>{{ results[7] }}</td>
+                </tr>
+                <tr>
+                    <td><input id="result4" name="result4" type="text" /></td>
+                    <td><input id="result5" name="result5" type="text" /></td>
+                    <td><input id="result6" name="result6" type="text" /></td>
+                    <td><input id="result7" name="result7" type="text" /></td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div>
+            <input type="submit" value="修正">
+            <input type="button" value="刷新" onClick="window.location.reload()">
+        </div>
+
+    </form>
+</body>
