@@ -1,4 +1,4 @@
-# 12306-captcha[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
+# 12306-captcha [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
 
 12306验证码识别
 
