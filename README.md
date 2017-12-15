@@ -1,4 +1,4 @@
-# 12306-captcha
+# 12306-captcha[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
 
 12306验证码识别
 
@@ -19,14 +19,14 @@
   -image
   --test
   ---蜡烛
-  ----1.jpg
+  ----1-1.jpg
   ---沙漠
-  ----1.jpg
+  ----2-1.jpg
   --train
   ---蜡烛
-  ----1.jpg
+  ----1-2.jpg
   ---沙漠
-  ----1.jpg
+  ----2-2.jpg
   ```
 * 运行`src/image/scripts/create_data.py`, 将会生成对应的train.txt和test.txt, 里面包含着训练和测试文件及其类别列表.
 
@@ -40,4 +40,4 @@
 ## 测试
 `src/web`提供了一个web测试界面, 运行index.py即可.　运行前, 可以更改对应的模型文件名称.　一个简单示例如下:
 
-![web-demo](https://github.com/aaronshan/12306-captcha/tree/master/web-demo.png)
+![web-demo](https://github.com/aaronshan/12306-captcha/blob/master/web-demo.png)
