@@ -139,4 +139,4 @@ def thread_main():
 
 
 if __name__ == '__main__':
-    thread_main()
+    cut_image(0)
