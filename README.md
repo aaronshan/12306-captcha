@@ -29,6 +29,7 @@
   ----2-2.jpg
   ```
 * 运行`src/image/scripts/create_data.py`, 将会生成对应的train.txt和test.txt, 里面包含着训练和测试文件及其类别列表.
+* 运行`src/image/scripts/create_lmdb.sh`, 将会生成对应的lmdb文件.
 
 ### 1.3 参数
 可以根据实际情况对`src/image/model/image_solver.prototxt`文件进行修改.具体修改方法可参考其他模型.
