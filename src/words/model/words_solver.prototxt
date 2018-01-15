@@ -1,0 +1,15 @@
+net: "./words_train_val.prototxt"
+test_iter: 14
+test_interval: 1000
+base_lr: 0.01
+momentum: 0.9
+weight_decay: 0.004
+lr_policy: "step"
+gamma: 0.1
+stepsize: 10000
+display: 200
+max_iter: 160000
+snapshot: 40000
+snapshot_prefix: "../words_4_snapshot"
+solver_mode: GPU
+

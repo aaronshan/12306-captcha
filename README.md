@@ -14,6 +14,7 @@
 
 * 通过运行`src/tools/download_image.py`, 会将12306验证码下载至`data/download/all`目录.
 * 下载完成后, 通过运行`src/tools/cut_image.py`, 会将其裁剪为图片和文字两部分, 分别放在`data/download/image`目录和`data/download/words`目录.
+* 修改`src/image/scripts/words.py`文件main方法中cut方法的参数(其参数为`data/download/words`中子目录的`words_*`中的数字),　它的目的是处理`data/download/words`中的所有子文件, 对多个词语进行分割并调整大小为固定值.
 * 然后手工对其进行分类, 分别放至`data/image`和`data/words`目录. 可以将其分为两部分，分别放在对应的train和test目录.比如,一个示例目录如下:
   ```
   -image
@@ -28,14 +29,26 @@
   ---沙漠
   ----2-2.jpg
   ```
-* 运行`src/image/scripts/create_data.py`, 将会生成对应的train.txt和test.txt, 里面包含着训练和测试文件及其类别列表.
-* 运行`src/image/scripts/create_lmdb.sh`, 将会生成对应的lmdb文件.
+
+#### 图片部分
+
+* 运行`src/image/scripts/create_data.py`, 将会生成图片部分对应的train.txt和test.txt, 里面包含着训练和测试文件及其类别列表.
+* 运行`src/image/scripts/create_lmdb.sh`, 将会生成图片部分对应的lmdb文件.
+
+#### 文字部分
+
+* 运行`src/words/scripts/create_data.py`, 将会生成文字部分对应的train.txt和test.txt, 里面包含着训练和测试文件及其类别列表.
+* 运行`src/words/scripts/create_lmdb.sh`, 将会生成文字部分对应的lmdb文件.
 
 ### 1.3 参数
-可以根据实际情况对`src/image/model/image_solver.prototxt`文件进行修改.具体修改方法可参考其他模型.
+可以根据实际情况对`src/image/model/image_solver.prototxt`和`src/words/model/words_solver.prototxt`文件进行修改.具体修改方法可参考其他模型.
 
 ### 1.4 开始训练
 `src/image/scripts/image_train.sh`和`src/image/scripts/image_finetune_train.sh`脚本分别用来进行从头训练/微调训练, 训练方法可参考caffe模型训练方法.
+
+同理：
+
+`src/words/scripts/words_train.sh`和`src/words/scripts/words_finetune_train.sh`脚本分别用来进行从头训练/微调训练, 训练方法可参考caffe模型训练方法.
 
 
 ## 测试
