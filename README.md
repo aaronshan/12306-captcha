@@ -1,4 +1,4 @@
-# 12306-captcha [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
+# 12306-captcha  [![Author](https://img.shields.io/badge/Author-%E4%B8%AD%E9%BE%84%E7%A8%8B%E5%BA%8F%E5%91%98-blue.svg)](https://www.shanruifeng.win) [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE) [![Stars](https://img.shields.io/github/stars/aaronshan/12306-captcha.svg?label=Stars&style=social)](https://github.com/aaronshan/12306-captcha)
 
 12306验证码识别
 
